@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "flexcolorpicker",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/RastislavMirek/FlexColorPicker",
+      "state" : {
+        "revision" : "72a5c2c5e28074e6c5f13efe3c98eb780ae2f906",
+        "version" : "1.4.4"
+      }
+    },
+    {
+      "identity" : "popupview",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Mijick/PopupView.git",
+      "state" : {
+        "revision" : "8ae288c6834e5743777f62f61c240ee10a2ca82d",
+        "version" : "1.6.1"
+      }
+    }
+  ],
+  "version" : 2
+}

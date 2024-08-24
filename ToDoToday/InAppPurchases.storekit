@@ -1,0 +1,70 @@
+{
+  "identifier" : "C9A01029",
+  "nonRenewingSubscriptions" : [
+
+  ],
+  "products" : [
+    {
+      "displayPrice" : "19.99",
+      "familyShareable" : false,
+      "internalID" : "1D722D5D",
+      "localizations" : [
+        {
+          "description" : "Access To Do, Today Pro forever",
+          "displayName" : "ToDo, Today Pro Lifetime",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "ToDoTodayLife",
+      "referenceName" : "Pro-Lifetime",
+      "type" : "NonConsumable"
+    }
+  ],
+  "settings" : {
+
+  },
+  "subscriptionGroups" : [
+    {
+      "id" : "056B44F6",
+      "localizations" : [
+
+      ],
+      "name" : "InAppPurchases",
+      "subscriptions" : [
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "0.99",
+          "familyShareable" : false,
+          "groupNumber" : 1,
+          "internalID" : "10A2B67C",
+          "introductoryOffer" : {
+            "internalID" : "92D53DCF",
+            "paymentMode" : "free",
+            "subscriptionPeriod" : "P1W"
+          },
+          "localizations" : [
+            {
+              "description" : "Access To Do, Today Pro for 1 Month",
+              "displayName" : "ToDo, Today Pro Monthly",
+              "locale" : "en_US"
+            }
+          ],
+          "productID" : "ToDoToday1Month",
+          "recurringSubscriptionPeriod" : "P1M",
+          "referenceName" : "Pro-1Month",
+          "subscriptionGroupID" : "056B44F6",
+          "type" : "RecurringSubscription"
+        }
+      ]
+    }
+  ],
+  "version" : {
+    "major" : 2,
+    "minor" : 0
+  }
+}

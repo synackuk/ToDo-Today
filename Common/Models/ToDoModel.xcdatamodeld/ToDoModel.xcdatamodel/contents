@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21754" systemVersion="22F66" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
+    <entity name="Category" representedClassName="Category" syncable="YES" codeGenerationType="class">
+        <attribute name="backingTitle" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <relationship name="linkedModel" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ToDoModel" inverseName="backingCategories" inverseEntity="ToDoModel"/>
+    </entity>
+    <entity name="ToDoModel" representedClassName="ToDoModel" syncable="YES" codeGenerationType="class">
+        <attribute name="autocomplete" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="backingCompletedDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="backingCompletedUnits" optional="YES" attributeType="Integer 64" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="backingCreationDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="backingEndDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="backingIcon" optional="YES" attributeType="String"/>
+        <attribute name="backingNotes" optional="YES" attributeType="String"/>
+        <attribute name="backingNotificationDates" optional="YES" attributeType="Transformable" valueTransformerName="NSSecureUnarchiveFromDataTransformerName" customClassName="[String]"/>
+        <attribute name="backingProgress" attributeType="Integer 64" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="backingProgressStep" attributeType="Integer 64" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="backingRepeatHandler" optional="YES" attributeType="String"/>
+        <attribute name="backingStartDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="backingSubToDoItems" optional="YES" attributeType="Transformable" valueTransformerName="NSSecureUnarchiveFromDataTransformerName" customClassName="[String]"/>
+        <attribute name="backingTitle" optional="YES" attributeType="String"/>
+        <attribute name="backingToDoType" optional="YES" attributeType="Integer 32" valueTransformerName="NSSecureUnarchiveFromDataTransformer" defaultValueString="0" usesScalarValueType="YES" customClassName="ToDoType"/>
+        <attribute name="dateSheduled" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="isChild" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="locked" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="timeSheduled" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="toDoBackingColour" optional="YES" attributeType="String" valueTransformerName=""/>
+        <relationship name="backingCategories" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Category" inverseName="linkedModel" inverseEntity="Category"/>
+        <relationship name="childToDos" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ToDoModel" inverseName="parentToDo" inverseEntity="ToDoModel"/>
+        <relationship name="nextToDo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ToDoModel" inverseName="prevToDo" inverseEntity="ToDoModel"/>
+        <relationship name="parentToDo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ToDoModel" inverseName="childToDos" inverseEntity="ToDoModel"/>
+        <relationship name="prevToDo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ToDoModel" inverseName="nextToDo" inverseEntity="ToDoModel"/>
+    </entity>
+</model>
